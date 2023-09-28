@@ -1,0 +1,14 @@
+@media screen and (max-width: 768px) {
+    main{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .instrucao {
+        align-self: self-start;
+    }
+
+    .mensagem-aviso {
+        align-self: self-start;
+    }
+}

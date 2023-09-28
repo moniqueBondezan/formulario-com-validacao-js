@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/responsive.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>Formulário com Validação - HTML + CSS + JS</title>
+</head>
+<body>
+    <main>
+        <div class="duvidas">
+            <h1>FICOU COM DÚVIDA? <br> NOS MANDE UMA MENSAGEM</h1>
+            <p>caso tenha ficado com qualquer dúvida basta nos mandar uma mensagem e entraremos em contato em menos de 24h.</p>
+        </div>
+
+        <form action="index.html" class="formulario">
+            <label for="nome"></label>
+            <input type="text" name="nome" id="nome" placeholder="Nome Completo *" class="campo">
+            <p class="mensagem-aviso">campo obrigatório</p>
+
+            <label for="email"></label>
+            <input type="email" name="email" id="email" placeholder="Email *" class="campo">
+            <p class="mensagem-aviso">campo obrigatório</p>
+
+            <label for="telefone"></label>
+            <input type="number" name="telefone" id="telefone" placeholder="Telefone *" class="campo">
+            <p class="mensagem-aviso">campo obrigatório</p>
+
+
+            <label for="mensagem"></label>
+            <textarea name="mensagem" id="mensageml" cols="30" rows="5" placeholder="Mensagem *" class="campo"> </textarea>
+            <p class="mensagem-aviso">campo obrigatório</p>
+
+            <p class="instrucao">*campos obrigatórios</p>
+
+            <button type="submit" class="botao-enviar">Enviar</button>
+        </form>
+    </main>
+
+    <script type="text/javascript" src="./src/js/index.js"></script>
+</body>
+</html>
