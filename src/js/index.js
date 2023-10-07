@@ -6,20 +6,23 @@
 // - Quando preenchido, adicionar classe com borda verde;
 // - Quando não preenchido, adicionar classe com borda vermelha + texto: 'campo obrigatório *';
 
-const camposFormulario = document.querySelectorAll('.campo')
+const inputList = document.querySelectorAll('.campo')
 const botaoEnviar = document.querySelector('.botao-enviar')
+
+
+function validateInput(input) {
+    if (input.value) {
+        input.classList.add('campo-valido')
+        input.nextElementSibling.classList.remove('mostrar-aviso')
+    } else {
+        input.classList.remove('campo-valido')
+        input.classList.add('campo-invalido')
+        input.nextElementSibling.classList.add('mostrar-aviso')
+    }
+}
 
 botaoEnviar.addEventListener('click', (e) => {
     e.preventDefault()
 
-    camposFormulario.forEach((input) => {
-        if (input.value) {
-            input.classList.add('campo-preenchido')
-            input.nextElementSibling.classList.remove('mostrar-aviso')
-        } else {
-            input.classList.remove('campo-preenchido')
-            input.classList.add('campo-obrigatorio')
-            input.nextElementSibling.classList.add('mostrar-aviso')
-        }
-    })
+    inputList.forEach((input) => validateInput(input))
 })
